@@ -25,6 +25,7 @@ public class DashManager : MonoBehaviour
             States.isDashing = true;
             dashTimer = dashDuration;
 
+            cooldownTimer = dashCooldown;
             rb.linearVelocity = States.lastMoveDirection * dashSpeed;
         }
     }
@@ -43,14 +44,10 @@ public class DashManager : MonoBehaviour
             if (dashTimer <= 0f)
             {
                 States.isDashing = false;
-                cooldownTimer = dashCooldown;
                 rb.linearVelocity = Vector2.zero;
             }
         }
-    }
 
-    public float GetCooldownPercent()
-    {
-        return Mathf.Clamp01(cooldownTimer / dashCooldown);
+        States.dashInCooldown = Mathf.Clamp01(cooldownTimer / dashCooldown);
     }
 }

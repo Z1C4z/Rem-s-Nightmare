@@ -18,6 +18,8 @@ public class Pointer : MonoBehaviour
 
     void Update()
     {
+        if (States.isPaused) return;
+
         if (Mouse.current == null || player == null) return;
 
         // Posição do mouse na tela
@@ -28,9 +30,11 @@ public class Pointer : MonoBehaviour
 
         // Direção do player até o mouse
         Vector2 direction = (PointerPosition - (Vector2)player.position).normalized;
+        States.lookingAt = direction;
 
         // Posição em órbita
         transform.position = (Vector2)player.position + direction * radius;
+        States.PointerPosition = transform.position;
 
         // Rotação: a ponta aponta para o mouse
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

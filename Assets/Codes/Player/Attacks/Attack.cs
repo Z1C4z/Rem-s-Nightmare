@@ -16,7 +16,9 @@ public class AttackManager : MonoBehaviour
     private float cooldownTimer;
 
     void Update()
-    {
+    {   
+        if (States.isPaused) return;
+
         if (cooldownTimer > 0f)
         {
             cooldownTimer -= Time.deltaTime;
@@ -36,7 +38,9 @@ public class AttackManager : MonoBehaviour
     }
 
     public void OnAttack(InputValue value)
-    {
+    {   
+        if (States.isPaused) return;
+        
         if (!isAttacking && cooldownTimer <= 0f)
         {
             isAttacking = true;
