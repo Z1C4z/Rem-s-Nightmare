@@ -8,6 +8,14 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] private GameObject healthBar;
     [SerializeField] private Image dashCooldownBar;
     [SerializeField] private Image projectileCooldownBar;
+    private Slider healthSlider;
+
+    private void Awake()
+    {
+        healthSlider = healthBar.GetComponent<Slider>();
+        healthSlider.maxValue = States.maxHealth;
+        States.currentHealth = States.maxHealth;
+    }
 
     void Update()
     {
@@ -16,5 +24,6 @@ public class InterfaceManager : MonoBehaviour
         //dashCooldownBar.SetActive(States.dashInCooldown > 0f);
         dashCooldownBar.fillAmount = States.dashInCooldown;
         projectileCooldownBar.fillAmount = States.projectileCooldown;
+        healthSlider.value = States.currentHealth;
     }
 }

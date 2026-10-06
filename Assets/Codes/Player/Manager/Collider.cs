@@ -1,26 +1,21 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class ColliderManager : MonoBehaviour
 {
-    bool invulneravel;
-
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (invulneravel || !collision.gameObject.CompareTag("Enemy")) return;
-
-        // playerHealth = GetComponent<Health>();
-        //playerHealth.TakeDamage(10);
-
-        //RedBlink redBlink = GetComponent<RedBlink>();
-        //redBlink.Blink();
-
-        // empurra o player para longe do inimigo
-        Vector2 direcao = (transform.position - collision.transform.position).normalized;
-        GetComponent<Rigidbody2D>().AddForce(direcao * 8f, ForceMode2D.Impulse);
-
-        invulneravel = true;
-        Invoke(nameof(FimInvulnerabilidade), 1f);
+        switch (collision.gameObject.tag)
+        {
+            case "Enemy":
+                Health.TakeDamage(10);
+                break;
+            case "Obstacle":
+                //Debug.Log("Colidiu com o obstáculo!");
+                break;
+            default:
+                //Debug.Log("Colidiu com um objeto desconhecido!");
+                break;
+        }
     }
-
-    void FimInvulnerabilidade() => invulneravel = false;
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -29,5 +30,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         States.isPaused = false;
         pausado = false;
+    }
+
+    public void Sair()
+    {
+        SceneManager.LoadScene("StartManu");
     }
 }
