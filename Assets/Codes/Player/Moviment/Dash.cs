@@ -19,7 +19,9 @@ public class DashManager : MonoBehaviour
     }
 
     public void OnDash(InputValue value)
-    {
+    {   
+        if (States.IsKnockedBack) return;
+
         if (!States.isDashing && cooldownTimer <= 0f)
         {
             States.isDashing = true;

@@ -17,4 +17,8 @@ public static class States
 
     public static float dashInCooldown;
     public static float projectileCooldown;
+
+    public static bool IsKnockedBack = false;
+
+    public static float points = 0f;
 }

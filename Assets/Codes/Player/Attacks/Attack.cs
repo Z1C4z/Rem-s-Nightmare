@@ -11,6 +11,7 @@ public class AttackManager : MonoBehaviour
     [Header("Hitbox")]
     [SerializeField] private GameObject BaseAttackHitbox;
 
+
     private bool isAttacking;
     private float attackTimer;
     private float cooldownTimer;

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,7 @@ public class InterfaceManager : MonoBehaviour
     [SerializeField] private GameObject healthBar;
     [SerializeField] private Image dashCooldownBar;
     [SerializeField] private Image projectileCooldownBar;
+    [SerializeField] private TextMeshProUGUI pointsText;
     private Slider healthSlider;
 
     private void Awake()
@@ -25,5 +27,6 @@ public class InterfaceManager : MonoBehaviour
         dashCooldownBar.fillAmount = States.dashInCooldown;
         projectileCooldownBar.fillAmount = States.projectileCooldown;
         healthSlider.value = States.currentHealth;
+        pointsText.text = "Points: " + States.points.ToString();
     }
 }

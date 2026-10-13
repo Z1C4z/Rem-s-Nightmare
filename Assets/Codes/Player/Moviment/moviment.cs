@@ -27,7 +27,9 @@ public class TopDownMovement : MonoBehaviour
     
 
     void FixedUpdate()
-    {
+    {   
+        if (States.IsKnockedBack) return;
+        
         if (!States.isDashing)
         {
             rb.MovePosition(rb.position + moveInput * speed * Time.fixedDeltaTime);
