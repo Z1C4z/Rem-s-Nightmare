@@ -21,4 +21,6 @@ public static class States
     public static bool IsKnockedBack = false;
 
     public static float points = 0f;
+
+    public static float bonusDamage = 0f;
 }

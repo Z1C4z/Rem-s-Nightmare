@@ -14,7 +14,7 @@ public class hitbox : MonoBehaviour
             if (enemy != null)
             {
                 Debug.Log("Hitbox colidiu com inimigo: " + enemy.name);
-                enemy.TakeDamage(attackDamage);
+                enemy.TakeDamage(attackDamage + States.bonusDamage);
                 enemy.gameObject.GetComponent<Knockback>().Apply(transform.position);
             }
         }

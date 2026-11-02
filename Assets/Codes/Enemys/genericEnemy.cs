@@ -65,6 +65,12 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void ApplyDifficulty(float healthMultiplier, float speedMultiplier)
+    {
+        maxHealth *= healthMultiplier;
+        moveSpeed *= speedMultiplier;
+    }
+
     protected virtual void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
