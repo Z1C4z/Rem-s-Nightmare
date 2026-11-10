@@ -47,6 +47,7 @@ public class AttackManager : MonoBehaviour
             isAttacking = true;
             attackTimer = attackDuration;
             BaseAttackHitbox.SetActive(true);
+            Sfx.PlayAt("atkSFX", transform.position, 1f);
 
         }
     }

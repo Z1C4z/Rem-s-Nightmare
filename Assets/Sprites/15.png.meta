@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 3ab43134eab9ce645b51c22138c7c4e7
+guid: 52c3766101223cc46a05431e19210391
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6772775923325811741
-    second: FLYING_0
+      213: 4349915267927364619
+    second: 15_0
   - first:
-      213: 5941632107932350943
-    second: FLYING_1
+      213: -8095896006545369725
+    second: 15_1
   - first:
-      213: -2846053855543560624
-    second: FLYING_2
+      213: 5739011196802332283
+    second: 15_2
   - first:
-      213: -6678637041112908962
-    second: FLYING_3
+      213: 4055332100673554613
+    second: 15_3
+  - first:
+      213: -9045062984340565635
+    second: 15_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,89 +125,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FLYING_0
+      name: 15_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 5
-        width: 78
-        height: 59
+        x: 210
+        y: 767
+        width: 694
+        height: 1029
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1c372d81dbbdfd50800000000000000
-      internalID: 6772775923325811741
+      spriteID: 3851c57d97995af80800000000000000
+      internalID: -8095896006545369725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FLYING_1
+      name: 15_2
       rect:
         serializedVersion: 2
-        x: 86
-        y: 1
-        width: 64
-        height: 66
+        x: 922
+        y: 766
+        width: 693
+        height: 1028
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd9fc5b0ceae47250800000000000000
-      internalID: 5941632107932350943
+      spriteID: b767463e64015af40800000000000000
+      internalID: 5739011196802332283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FLYING_2
+      name: 15_3
       rect:
         serializedVersion: 2
-        x: 164
-        y: 5
-        width: 68
-        height: 61
+        x: 1662
+        y: 777
+        width: 621
+        height: 1017
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 056f1b0f819c088d0800000000000000
-      internalID: -2846053855543560624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FLYING_3
-      rect:
-        serializedVersion: 2
-        x: 243
-        y: 5
-        width: 67
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e5bf2bcfef6b053a0800000000000000
-      internalID: -6678637041112908962
+      spriteID: 5b8c2ea3f0f674830800000000000000
+      internalID: 4055332100673554613
       vertices: []
       indices: 
       edges: []
@@ -213,7 +194,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ed5abeee20a9fd649a4c2719eb80c447
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +204,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FLYING_0: 6772775923325811741
-      FLYING_1: 5941632107932350943
-      FLYING_2: -2846053855543560624
-      FLYING_3: -6678637041112908962
+      15_0: 4349915267927364619
+      15_1: -8095896006545369725
+      15_2: 5739011196802332283
+      15_3: 4055332100673554613
+      15_4: -9045062984340565635
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

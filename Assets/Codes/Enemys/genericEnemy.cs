@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float detectionRange = 6f;
     [SerializeField] protected float stopDistance = 0.5f;
     [SerializeField] protected float points = 5f;
+    [SerializeField] protected AudioClip ghostSFX;
 
     [Header("Alvo")]
     [SerializeField] protected Transform target;
@@ -32,6 +33,7 @@ public class Enemy : MonoBehaviour
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null) target = player.transform;
         }
+        Sfx.PlayAt("ghostSFX",transform.position, 1f);
     }
 
     protected virtual void FixedUpdate()
@@ -56,12 +58,14 @@ public class Enemy : MonoBehaviour
     public virtual void TakeDamage(float amount)
     {
         currentHealth -= amount;
+        Sfx.PlayAt("ghostDmgSFX", transform.position, 1f);
         if (currentHealth <= 0f) Die();
     }
 
     protected virtual void Die()
     {
         States.points += points;
+        States.enemiesKilled += 1;
         Destroy(gameObject);
     }
 

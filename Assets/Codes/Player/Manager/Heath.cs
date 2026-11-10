@@ -11,7 +11,9 @@ public class Health: MonoBehaviour
     public static void TakeDamage(int damage)
     {
         States.currentHealth -= damage;
-        //States.currentHealth = Mathf.Clamp(States.currentHealth, 0, States.maxHealth);
+        States.damageTaken += damage;
+    
+        Sfx.Play("playerDmgSFX", volume: 0.4f);
 
         if (States.currentHealth <= 0)
         {
@@ -22,17 +24,7 @@ public class Health: MonoBehaviour
     private static void Die()
     {
         Debug.Log("Player has died.");
+        Sfx.Play("deathSFX", 1f);
         SceneManager.LoadScene("DeathScreen");
     }
-    
-
-    //public int GetCurrentHealth()
-    //{
-    //    return States.currentHealth;
-    //}
-
-    //public int GetMaxHealth()
-    //{
-     //   return States.maxHealth;
-    //}
 }

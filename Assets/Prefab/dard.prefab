@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8453861009850844463}
   - component: {fileID: 1938253416026668262}
   - component: {fileID: 474087725137586780}
+  - component: {fileID: 1840527234957240302}
   m_Layer: 0
   m_Name: dard
   m_TagString: Untagged
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 2996787348143842123, guid: 379ee1359786c2d45a05952782cfc7ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,8 +185,8 @@ BoxCollider2D:
   m_Offset: {x: -0.0024970174, y: 0.14516273}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.37, y: 1.3834814}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -193,3 +194,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.9200959, y: 0.8676588}
   m_EdgeRadius: 0
+--- !u!114 &1840527234957240302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6930705003905494313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0aa4299f646df748875de2e8b8d3cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GirarSemPararFisica
+  velocidade: 300

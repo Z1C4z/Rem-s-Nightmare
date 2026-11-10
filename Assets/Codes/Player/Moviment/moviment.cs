@@ -13,6 +13,14 @@ public class TopDownMovement : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        States.currentHealth = States.maxHealth;
+        States.points = 0f;
+        States.bonusDamage = 0f;
+        States.damageDealt = 0;
+        States.enemiesKilled = 0;
+        States.buffsPickedUp = 0;
+        States.healsPickedUp = 0;
+        States.damageTaken = 0;
     }
 
     public void OnMove(InputValue value)

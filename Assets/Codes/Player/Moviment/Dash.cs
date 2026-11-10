@@ -30,6 +30,8 @@ public class DashManager : MonoBehaviour
             cooldownTimer = dashCooldown;
             rb.linearVelocity = States.lastMoveDirection * dashSpeed;
         }
+
+        Sfx.Play("dashSFX");
     }
 
     void Update()

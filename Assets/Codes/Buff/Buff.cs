@@ -8,15 +8,17 @@ public class BuffPickup : MonoBehaviour
 
     [Header("Config")]
     [SerializeField] private string playerTag = "Player";
-    [SerializeField] private bool onlyPickupIfHurt = false; // se true, cura só é coletada com vida incompleta
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag(playerTag)) return;
 
-       States.currentHealth += healAmount;
-       States.bonusDamage += damageBonus;
+        States.currentHealth += healAmount;
+        States.bonusDamage += damageBonus;
 
+        States.healsPickedUp += healAmount;
+        States.buffsPickedUp += 1;
+        Sfx.PlayAt("buffSFX", transform.position, 1f);
         Destroy(gameObject);
     }
 

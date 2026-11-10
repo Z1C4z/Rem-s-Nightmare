@@ -75,12 +75,10 @@ private int currentLevel;
         GameObject buff = Instantiate(prefab, pos, Quaternion.identity);
        
         activeBuffs.Add(buff);
+        Sfx.PlayAt("buffSpawnSFX", pos, 1f);
 
         if (buff.TryGetComponent(out BuffPickup pickup))
             pickup.ApplyLevelBonus(currentLevel, healIncreasePerLevel, damageIncreasePerLevel);
-
-        if (buffLifetime > 0f)
-            Destroy(buff, buffLifetime);
 
         if (buffLifetime > 0f)
             Destroy(buff, buffLifetime);

@@ -70,6 +70,7 @@ public class LaunchProjectile : MonoBehaviour
             return;
         }
 
+        Sfx.PlayAt("throwAtkSFX", transform.position, 1f);
         rb.linearVelocity = direction * projectileSpeed;
         Destroy(projectile, projectileLifetime);
     }

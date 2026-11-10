@@ -21,6 +21,14 @@ public static class States
     public static bool IsKnockedBack = false;
 
     public static float points = 0f;
-
     public static float bonusDamage = 0f;
+
+    // Statistics
+    public static int damageDealt = 0;
+    public static int enemiesKilled = 0;
+
+    public static int buffsPickedUp = 0;
+    public static int healsPickedUp = 0;
+    
+    public static int damageTaken = 0;
 }
